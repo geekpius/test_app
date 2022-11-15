@@ -43,7 +43,6 @@ class PageViewContent extends StatelessWidget {
             height: 48.0.h,
           ),
 
-          // SizedBox(height: 150.h),
           const Spacer(flex: 5),
           Text(
             hashTag,
