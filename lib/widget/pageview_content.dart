@@ -50,37 +50,39 @@ class PageViewContent extends StatelessWidget {
         ),
 
         index == 0 ?
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(flex: 9),
-            FSvgIcon(
-              'logo.svg',
-              width: 171.w,
-              height: 48.0.h,
-            ),
-
-            const Spacer(flex: 5),
-            Text(
-              hashTag,
-              style: kBoldItalicFontStyle.copyWith(
-                  fontSize: kSize20.sp,
-                  color: themeColor.textTheme.bodyText1?.color,
-                  height: Constant.getLineHeight(23.7, kSize20)
+        Align(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Spacer(flex: 9),
+              FSvgIcon(
+                'logo.svg',
+                width: 171.w,
+                height: 48.0.h,
               ),
-            ),
-            Text(
-              title,
-              style: kBoldItalicFontStyle.copyWith(
-                  fontSize: kSize40.sp,
-                  color: themeColor.textTheme.bodyText2?.color,
-                  letterSpacing: Constant.getLetterSpacing(0.28),
-                  height: Constant.getLineHeight(34, kSize40)
-              ),
-            ),
-            const Spacer(flex: 5),
 
-          ],
+              const Spacer(flex: 5),
+              Text(
+                hashTag,
+                style: kBoldItalicFontStyle.copyWith(
+                    fontSize: kSize20.sp,
+                    color: themeColor.textTheme.bodyText1?.color,
+                    height: Constant.getLineHeight(23.7, kSize20)
+                ),
+              ),
+              Text(
+                title,
+                style: kBoldItalicFontStyle.copyWith(
+                    fontSize: kSize40.sp,
+                    color: themeColor.textTheme.bodyText2?.color,
+                    letterSpacing: Constant.getLetterSpacing(0.28),
+                    height: Constant.getLineHeight(34, kSize40)
+                ),
+              ),
+              const Spacer(flex: 5),
+
+            ],
+          ),
         )
             :
         Container(
