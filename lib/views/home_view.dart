@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/classes/custom_physics.dart';
 import 'package:test_app/constants.dart';
 import 'package:test_app/widget/f_indicator.dart';
 import 'package:test_app/widget/pageview_content.dart';
@@ -34,6 +35,7 @@ class _HomeViewState extends State<HomeView> {
           children: [
             PageView.builder(
               controller: _controller,
+              physics: const CustomPageViewScrollPhysics(),
               itemCount: pages.length,
               onPageChanged: (int index){
                 setState(() => _currentPage = index );
